@@ -1,10 +1,11 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Navigation from "./components/nav/Nav";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello Word</h1>
+      <Navigation />
     </div>
   );
 }
