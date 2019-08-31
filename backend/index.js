@@ -2,7 +2,7 @@ const express = require("express");
 const db = require("./database/database");
 const cors = require("cors"); // for doing axios call without problems
 const bodyParser = require("body-parser"); // for have access to post request res.body
-const helpers = require('./helperFunctions/helper');
+const helpers = require("./helperFunctions/helper");
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
@@ -10,10 +10,6 @@ app.use(bodyParser.json());
 db.connect()
   .then(() => {
     console.log("Database connected");
-    db.query("select * from goals", (err, res) => {
-      console.log(res.rows);
-      db.end();
-    });
   })
   .catch(err => {
     console.log("error connecting to db");
@@ -24,7 +20,7 @@ app.get("/tasks", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-    console.log("registering users")
+  console.log("registering users");
 });
 
 app.get("/goals", (req, res) => {
@@ -32,7 +28,15 @@ app.get("/goals", (req, res) => {
 });
 
 app.post("/createGoal", (req, res) => {
-  console.log("creating goals");
+  const queryString = helpers.createGoalQuery(req.body);
+
+  db.query(queryString)
+    .then(result => {
+      res.send(200);
+    })
+    .catch(err => {
+      res.send(400);
+    });
 });
 
 app.post("/createTask", (req, res) => {
