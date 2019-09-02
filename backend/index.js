@@ -16,7 +16,14 @@ db.connect()
   });
 
 app.get("/tasks", (req, res) => {
-  res.send("will send tasks");
+  const queryString = `select * from tasks;`;
+  db.query(queryString)
+    .then(data => {
+      res.json(data.rows);
+    })
+    .catch(err => {
+      res.sendStatus(400);
+    });
 });
 
 app.post("/register", (req, res) => {
@@ -24,7 +31,14 @@ app.post("/register", (req, res) => {
 });
 
 app.get("/goals", (req, res) => {
-  res.send("will send goals");
+  const queryString = `select * from goals;`;
+  db.query(queryString)
+    .then(data => {
+      res.json(data.rows);
+    })
+    .catch(err => {
+      res.sendStatus(400);
+    });
 });
 
 app.post("/createGoal", (req, res) => {
@@ -32,15 +46,23 @@ app.post("/createGoal", (req, res) => {
 
   db.query(queryString)
     .then(result => {
-      res.send(200);
+      res.sendStatus(200);
     })
     .catch(err => {
-      res.send(400);
+      res.sendStatus(400);
     });
 });
 
 app.post("/createTask", (req, res) => {
-  console.log(req.body);
+  const queryString = helpers.createTaskQuery(req.body);
+
+  db.query(queryString)
+    .then(result => {
+      res.sendStatus(200);
+    })
+    .catch(err => {
+      res.sendStatus(400);
+    });
 });
 
 app.listen(3000, () => {

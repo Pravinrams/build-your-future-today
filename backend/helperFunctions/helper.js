@@ -1,5 +1,7 @@
-function createTaskQuery(name, description, completed, goalid) {
-  // do something here
+function createTaskQuery(queryInfo) {
+  const { name, description, completed, goalid } = queryInfo;
+  let values = arryToString([ name, description, completed, goalid ]);
+  return `insert into tasks (name, description, completed, goalid) values (${values});`;
 }
 
 function createGoalQuery(queryInfo) {
