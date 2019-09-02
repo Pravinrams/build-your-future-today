@@ -3,7 +3,19 @@ import "./nav.css";
 
 class Navigation extends React.Component {
   render() {
-    return <h1>Hello</h1>;
+    return (
+      <div className="main-nav-container">
+        <div className="nav-links" >
+          links
+        </div>
+        <div className="nav-search">
+          search
+        </div>
+        <div className="nav-profile">
+          profile
+        </div>
+      </div>
+    );
   }
 }
 
