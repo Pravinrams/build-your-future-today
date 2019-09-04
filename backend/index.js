@@ -27,7 +27,15 @@ app.get("/tasks", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-  console.log("registering users");
+  const queryString = helpers.registerUserQuery(req.body);
+  
+  db.query(queryString)
+    .then(data => {
+      res.sendStatus(200);
+    })
+    .catch(err => {
+      res.sendStatus(400);
+    });
 });
 
 app.get("/goals", (req, res) => {

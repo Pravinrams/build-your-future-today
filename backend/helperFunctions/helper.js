@@ -26,8 +26,10 @@ function createGoalQuery(queryInfo) {
   return `insert into goals (name, description, startdate, enddate, completed, userid) values (${values});`;
 }
 
-function registerUserQuery(name, description, completed, goalid) {
-  // do something here
+function registerUserQuery(queryInfo) {
+  const {name, lastname, email, password } = queryInfo;
+  const values = arryToString([name,lastname,email,password])
+  return `insert into users (name, lastname, email, password) values (${values});`;
 }
 
 function arryToString(arr) {
