@@ -1,6 +1,6 @@
 function createTaskQuery(queryInfo) {
   const { name, description, completed, goalid } = queryInfo;
-  let values = arryToString([ name, description, completed, goalid ]);
+  let values = arryToString([name, description, completed, goalid]);
   return `insert into tasks (name, description, completed, goalid) values (${values});`;
 }
 
@@ -27,8 +27,8 @@ function createGoalQuery(queryInfo) {
 }
 
 function registerUserQuery(queryInfo) {
-  const {name, lastname, email, password } = queryInfo;
-  const values = arryToString([name,lastname,email,password])
+  const { name, lastname, email, password } = queryInfo;
+  const values = arryToString([name, lastname, email, password]);
   return `insert into users (name, lastname, email, password) values (${values});`;
 }
 
