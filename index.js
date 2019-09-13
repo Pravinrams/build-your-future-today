@@ -15,6 +15,10 @@ db.connect()
     console.log("error connecting to db");
   });
 
+app.get("/", (req, res) => {
+ res.send("home page")
+});
+
 app.get("/tasks", (req, res) => {
   const queryString = `select * from tasks;`;
   db.query(queryString)
