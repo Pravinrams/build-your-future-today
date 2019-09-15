@@ -5,6 +5,7 @@ const bodyParser = require("body-parser"); // for have access to post request re
 const helpers = require("./helperFunctions/helper");
 const app = express();
 app.use(cors());
+app.set("view engine","hbs");
 app.use(bodyParser.json());
 
 db.connect()
@@ -16,7 +17,7 @@ db.connect()
   });
 
 app.get("/", (req, res) => {
- res.send("home page")
+ res.render("index", {name:"jeff"})
 });
 
 app.get("/tasks", (req, res) => {
