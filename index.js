@@ -54,16 +54,16 @@ app.get("/goals", (req, res) => {
     });
 });
 
-app.post("/createGoal", (req, res) => {
+app.get("/createGoal", (req, res) => {
   const queryString = helpers.createGoalQuery(req.body);
-
-  db.query(queryString)
-    .then(result => {
-      res.sendStatus(200);
-    })
-    .catch(err => {
-      res.sendStatus(400);
-    });
+   res.render("createGoal")
+  // db.query(queryString)
+  //   .then(result => {
+  //     res.sendStatus(200);
+  //   })
+  //   .catch(err => {
+  //     res.sendStatus(400);
+  //   });
 });
 
 app.post("/createTask", (req, res) => {
