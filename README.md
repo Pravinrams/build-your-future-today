@@ -1,4 +1,4 @@
-## Running the App**
+## Running the App
 
 If your credentials are different from these: 
 ```
