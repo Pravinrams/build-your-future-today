@@ -16,15 +16,19 @@ class ViewTask extends React.Component {
 
   getColor = status => {
     switch (status) {
-      case "in complete":
-        return "neutral";
       case "complete":
         return "green";
+      case "in complete":
+        return "neutral";
     }
   };
 
   editTask = () => {
     this.setState({ isEditingTask: true });
+  };
+
+  updateTaskStatus = () => {
+    alert("it worked");
   };
 
   render() {
@@ -49,7 +53,7 @@ class ViewTask extends React.Component {
         <div className="view-goal">
           <div className="view-goal-header">
             <h2>{taskInfo.title}</h2>
-            <Badge isSolid color={this.getColor(this.props.status)}>
+            <Badge isSolid color={this.getColor(this.props.taskInfo.status)}>
               {taskInfo.status}
             </Badge>
           </div>
@@ -69,6 +73,20 @@ class ViewTask extends React.Component {
           <div>
             <h3>Descriptions</h3>
             <p>{taskInfo.description}</p>
+          </div>
+          <div>
+            {taskInfo.status == "complete" ? (
+              <button
+                className="btn no-started"
+                onClick={this.updateTaskStatus}
+              >
+                Mark as incomplete
+              </button>
+            ) : (
+              <button className="btn done" onClick={this.updateTaskStatus}>
+                Mark as complete
+              </button>
+            )}
           </div>
         </div>
       </div>
