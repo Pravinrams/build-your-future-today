@@ -28,7 +28,16 @@ class ViewTask extends React.Component {
   };
 
   updateTaskStatus = () => {
-    alert("it worked");
+    const status = this.props.taskInfo.status;
+    const { editTask, taskInfo } = this.props;
+    const {taskId, title, description } = taskInfo;
+    
+
+    if( status == 'complete') {
+      editTask(taskId, { status: 'incomplete', title, description })
+    } else {
+      editTask(taskId, { status: 'complete',title, description })
+    }
   };
 
   render() {
