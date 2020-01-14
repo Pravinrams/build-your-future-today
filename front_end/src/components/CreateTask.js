@@ -34,6 +34,7 @@ class CreateTask extends React.Component {
           </div>
           <div className="create-task-inputs-container">
             <div>
+              <p>Name</p>
               <input
                 className="input-view"
                 value={name}

@@ -52,7 +52,7 @@ class Nav extends React.Component {
     return (
       <div className="main-nav">
         <ul className="left-nav">
-          <Link to="/">BUILD YOUR FUTURE TODAY</Link>
+          <Link to="/">Build Your Future Today</Link>
         </ul>
         {this.getLinks()}
       </div>

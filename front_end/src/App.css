@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.left-nav{
+  font-weight: 600;
+}
+
 /* Home */
 .home-welcome-section {
   display: flex;

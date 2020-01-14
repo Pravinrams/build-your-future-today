@@ -212,11 +212,11 @@ class ViewGoal extends React.Component {
           </div>
 
           <div>
-            <h3>Why I want to do it</h3>
-            <p>{reason}</p>
-
-            <h3>Descriptions</h3>
+            <h3>Description</h3>
             <p>{description}</p>
+
+            <h3>Reason</h3>
+            <p>{reason}</p>
           </div>
 
           <div>

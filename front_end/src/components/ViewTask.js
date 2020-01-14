@@ -80,7 +80,7 @@ class ViewTask extends React.Component {
           </div>
 
           <div>
-            <h3>Descriptions</h3>
+            <h3>Description</h3>
             <p>{taskInfo.description}</p>
           </div>
           <div>

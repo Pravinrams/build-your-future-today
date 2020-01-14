@@ -111,7 +111,7 @@ class GoalLister extends React.Component {
         <Nav logout={this.props.logout} />
         <div className="goal-lister-container">
           <div className="goal-lister-header">
-            <h1>GoalLister</h1>
+            <h1>Goal Lister</h1>
             <div>
               <button className="add-goal-btn" onClick={this.addGoal}>
                 Create Goal
