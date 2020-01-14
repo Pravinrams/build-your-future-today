@@ -34,7 +34,7 @@ class Nav extends React.Component {
           ) : null}
 
           <a href="#" onClick={() => this.props.logout()}>
-            LogOut
+            Log Out
           </a>
         </ul>
       );
@@ -43,7 +43,7 @@ class Nav extends React.Component {
     return (
       <ul className="right-nav">
         <Link to="/">Home</Link>
-        <Link to="/login">LogIn</Link>
+        <Link to="/login">Log In</Link>
         <Link to="/register">Register</Link>
       </ul>
     );

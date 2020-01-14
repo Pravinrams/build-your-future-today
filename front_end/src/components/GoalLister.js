@@ -55,7 +55,7 @@ class GoalLister extends React.Component {
       ));
     }
 
-    return <h1>Sorry, not goals</h1>;
+    return <h1>Sorry, you have not created any goal yet</h1>;
   };
 
   addGoal = () => {
