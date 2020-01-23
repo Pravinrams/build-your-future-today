@@ -1,3 +1,18 @@
+## Preview
+
+### Home page
+<img width='500' src='preview/home.gif' />
+
+### Goals
+<img width='500' src='preview/goals.gif' />
+
+### Board
+<img width='500' src='preview/board.gif' />
+
+### Tasks
+<img width='500' src='preview/task.gif' />
+
+
 ## Running the App
 
 If your credentials are different from these: 
