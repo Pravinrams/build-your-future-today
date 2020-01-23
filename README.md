@@ -13,7 +13,7 @@
 <img width='500' src='preview/task.gif' />
 
 
-## Running the App
+## Running Dev Version
 
 If your credentials are different from these: 
 ```
