@@ -68,6 +68,11 @@ class Login extends React.Component {
               <span>Don't have an account ?</span>{" "}
               <Link to="/register">Register</Link>
             </div>
+            <div>
+              <p className="test-user-container">Testing user</p>
+              <span>username: test1</span>
+              <span>password: 123</span>
+            </div>
           </div>
         </div>
       </div>
