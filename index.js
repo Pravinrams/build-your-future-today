@@ -221,4 +221,4 @@ schedule.scheduleJob("0 0 * * *", () => {
   queryExecutor(query).then(() => console.log("Tasks updated"));
 });
 
-app.listen(5000, () => console.log("server is running"));
+app.listen(3000, () => console.log("server is running"));
