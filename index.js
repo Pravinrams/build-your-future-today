@@ -1,6 +1,6 @@
 const express = require("express");
-const dbOperations = require("./database");
-const queryExecutor = dbOperations.queryExecutor;
+//const dbOperations = require("./database");
+//const queryExecutor = dbOperations.queryExecutor;
 const schedule = require("node-schedule");
 const path = require("path");
 
