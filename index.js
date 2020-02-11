@@ -1,8 +1,9 @@
 const express = require("express");
-//const dbOperations = require("./database");
-//const queryExecutor = dbOperations.queryExecutor;
+const dbOperations = require("./database");
+const queryExecutor = dbOperations.queryExecutor;
 const schedule = require("node-schedule");
 const path = require("path");
+const PORT = process.env.PORT || 80;
 
 const app = express();
 
@@ -221,4 +222,4 @@ schedule.scheduleJob("0 0 * * *", () => {
   queryExecutor(query).then(() => console.log("Tasks updated"));
 });
 
-app.listen(3000, () => console.log("server is running"));
+app.listen(PORT, () => console.log("server is running"));
