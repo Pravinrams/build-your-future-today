@@ -1,5 +1,6 @@
 const { Client } = require("pg");
-
+console.log(process.env.DB_HOST)
+console.log(process.env.PASSWORD)
 const buildQueryExecutor = client => query =>
   db
     .query(query)
