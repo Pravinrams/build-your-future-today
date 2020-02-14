@@ -69,9 +69,13 @@ class Login extends React.Component {
               <Link to="/register">Register</Link>
             </div>
             <div>
-              <p className="test-user-container">Testing user</p>
-              <span>username: test1</span>
-              <span>password: 123</span>
+              <div className="test-user-container">
+                <p>
+                  <strong>Testing user</strong>
+                </p>
+                <span>username: test1</span>
+                <span>password: 123</span>
+              </div>
             </div>
           </div>
         </div>
