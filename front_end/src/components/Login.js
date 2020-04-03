@@ -19,6 +19,14 @@ class Login extends React.Component {
     this.setState({ password: e.target.value.trim() });
   };
 
+  handleKeyDown = e => {
+    const { username, password } = this.state;
+
+    if (e.key === "Enter" && username.length && password.length) {
+      this.props.login(this.state);
+    }
+  };
+
   render() {
     const { username, password } = this.state;
     const isValid = username && password;
@@ -51,6 +59,7 @@ class Login extends React.Component {
                 type="password"
                 placeholder="password"
                 onChange={this.handlePassword}
+                onKeyDown={this.handleKeyDown}
               />
             </div>
 
